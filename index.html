@@ -14,36 +14,6 @@
       scroll-snap-type: y mandatory;
     }
 
-    /* Back button */
-    #backBtn {
-      position: fixed;
-      top: 16px;
-      left: 16px;
-      z-index: 999;
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      font-size: 16px;
-      border-radius: 50px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      transition: 0.3s;
-    }
-
-    #backBtn:hover {
-      transform: scale(1.05);
-    }
-
-    #backBtn svg {
-      margin-right: 8px;
-      width: 18px;
-      height: 18px;
-      fill: white;
-    }
-
     /* Each video section */
     .video-section {
       position: relative;
@@ -89,13 +59,6 @@
 </head>
 <body>
 
-  <button id="backBtn" onclick="goBack()">
-    <svg viewBox="0 0 20 20">
-      <path d="M9 1L10.4 2.4 3.8 9H19v2H3.8l6.6 6.6L9 19 0 10z" />
-    </svg>
-    Back
-  </button>
-
   <!-- Dharma Deshana Videos -->
   <div id="videos">
     <div class="video-section"><div class="video-wrapper">
@@ -132,10 +95,6 @@
   </div>
 
   <script>
-    function goBack() {
-      window.location.href = "index.html";
-    }
-
     // === Auto Play / Pause on Scroll ===
     const iframes = document.querySelectorAll('iframe');
     const players = [];
