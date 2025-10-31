@@ -1,132 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharma Deshana Player</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #000;
-      overflow-y: scroll;
-      scroll-snap-type: y mandatory;
-    }
-
-    /* Each video section */
-    .video-section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      scroll-snap-align: start;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-      overflow: hidden;
-    }
-
-    /* Wrapper to maintain 9:16 ratio */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      max-width: 100vw;
-      max-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-    }
-
-    .video-wrapper iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: #000;
-      object-fit: contain; /* ✅ thumbnail & video fully visible, no crop */
-    }
-
-    @media (min-width: 768px) {
-      .video-wrapper {
-        width: 56.25vh; /* maintain 9:16 */
-        height: 100vh;
-        margin: 0 auto;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharma Deshana </title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .video-slide {
+    scroll-snap-align: start;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #000;
+    object-fit: contain; /* thumbnail crop prevent */
+  }
+</style>
 </head>
 <body>
 
-  <!-- Dharma Deshana Videos -->
-  <div id="videos">
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/qK-x5X8Q9RA?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/cG464QKla2k?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/QrhEa__Vd54?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/Qnn3VnNzlh0?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/RGUEPEqSHKw?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/OqC9bVWs1Fc?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/Fn7FIS6HaHg?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
-
-    <div class="video-section"><div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/7liwc-UeV9I?enablejsapi=1&modestbranding=1&controls=1&rel=0"></iframe>
-    </div></div>
+<div class="video-container">
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/qK-x5X8Q9RA?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/cG464QKla2k?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/QrhEa__Vd54?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/Qnn3VnNzlh0?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/RGUEPEqSHKw?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/OqC9bVWs1Fc?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/Fn7FIS6HaHg?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="video-slide">
+    <iframe src="https://www.youtube.com/embed/7liwc-UeV9I?enablejsapi=1&autoplay=0&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
 
-  <script>
-    // === Auto Play / Pause on Scroll ===
-    const iframes = document.querySelectorAll('iframe');
-    const players = [];
+<script>
+  const iframes = document.querySelectorAll('iframe');
 
-    function onYouTubeIframeAPIReady() {
-      iframes.forEach((iframe, i) => {
-        players[i] = new YT.Player(iframe, {});
-      });
-    }
+  // Load YouTube API
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
 
-    // Load YouTube IFrame API
-    const tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
+  let players = [];
+  function onYouTubeIframeAPIReady() {
+    iframes.forEach((iframe, i) => {
+      players[i] = new YT.Player(iframe);
+    });
+  }
 
-    // Detect visible video
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const iframe = entry.target;
-        const player = players[Array.from(iframes).indexOf(iframe)];
-        if (player && player.playVideo) {
-          if (entry.isIntersecting) {
-            player.playVideo();
-          } else {
-            player.pauseVideo();
-          }
+  // Scroll-based play/pause
+  const container = document.querySelector('.video-container');
+  container.addEventListener('scroll', () => {
+    const middle = window.innerHeight / 2;
+    iframes.forEach((frame, i) => {
+      const rect = frame.getBoundingClientRect();
+      if (players[i]) {
+        if (rect.top < middle && rect.bottom > middle) {
+          players[i].playVideo();
+        } else {
+          players[i].pauseVideo();
         }
-      });
-    }, { threshold: 0.7 });
-
-    iframes.forEach(iframe => observer.observe(iframe));
-  </script>
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
